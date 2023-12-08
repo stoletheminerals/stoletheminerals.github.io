@@ -1,0 +1,11 @@
+#EXTM3U
+#EXT-X-VERSION:1
+## Created with Unified Streaming Platform (version=1.11.20-26889)
+#EXT-X-MEDIA-SEQUENCE:1
+#EXT-X-TARGETDURATION:4
+#USP-X-TIMESTAMP-MAP:MPEGTS=900000,LOCAL=1970-01-01T00:00:00Z
+#EXTINF:4, logo="cover.jpg",Track Title
+https://cdn.theoplayer.com/video/big_buck_bunny/stream-4-6000000/frag-104.ts
+#EXTINF:4, logo="cover.jpg",Track Title
+http://192.168.1.132:8000/test.ts
+#EXT-X-ENDLIST
