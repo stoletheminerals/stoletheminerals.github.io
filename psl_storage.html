@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>localStorage Test – github.io</title>
+</head>
+<body>
+  <h1>localStorage Test: github.io</h1>
+
+  <button onclick="setToken()">Set Token</button>
+  <button onclick="clearToken()">Clear Token</button>
+
+  <p id="output">Current Token: (none)</p>
+
+  <script>
+    function setToken() {
+      localStorage.setItem("auth_token", "hacked_by_foo");
+      updateOutput();
+    }
+
+    function clearToken() {
+      localStorage.removeItem("auth_token");
+      updateOutput();
+    }
+
+    function updateOutput() {
+      const token = localStorage.getItem("auth_token");
+      document.getElementById("output").innerText =
+        "Current Token: " + (token ?? "(none)");
+    }
+
+    // Initialize display
+    updateOutput();
+  </script>
+</body>
+</html>

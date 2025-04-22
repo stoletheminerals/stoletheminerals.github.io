@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie Test – github.io</title>
+</head>
+<body>
+  <h1>Cookie Test: github.io</h1>
+
+  <button onclick="setSharedCookie()">Set Cookie (domain=github.io)</button>
+  <button onclick="clearSharedCookie()">Clear Cookie (domain=github.io)</button>
+
+  <p id="status"></p>
+
+  <script>
+    function setSharedCookie() {
+      document.cookie = "session=foo123; domain=github.io; path=/";
+      document.getElementById("status").innerText = "Cookie set: " + document.cookie;
+    }
+
+    function clearSharedCookie() {
+      document.cookie = "session=; domain=github.io; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+      document.getElementById("status").innerText = "Cookie cleared.";
+    }
+
+    // Show current cookie (for debugging)
+    document.getElementById("status").innerText = "Initial cookie: " + document.cookie;
+  </script>
+</body>
+</html>

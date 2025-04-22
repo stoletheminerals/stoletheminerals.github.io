@@ -1,0 +1,11 @@
+<iframe src="https://prohibitedduck.github.io/test.html" id="stealer"></iframe>
+<script>
+  setTimeout(() => {
+    try {
+      let secret = document.getElementById("stealer").contentDocument.body.innerText;
+      alert("Accessed secret: " + secret);
+    } catch (e) {
+      alert("Access denied due to same-origin policy.");
+    }
+  }, 1000);
+</script>
